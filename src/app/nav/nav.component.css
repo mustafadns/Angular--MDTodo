@@ -1,0 +1,57 @@
+.navbar {
+    height: 5rem;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    text-shadow: 10px 10px 10px black;
+}
+
+.nav-link:active {
+    font-weight: 600;
+    color: black;
+    text-decoration: underline gray;
+}
+
+.btn-btn1 {
+    position: relative;
+    color: red;
+    border-color: red;
+    width: 170px;
+    border-radius: 1rem;
+    border: 2px solid;
+    height: 3rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.btn-btn1:hover {
+    color: white;
+    background-color: red;
+    transition: all 250ms ease-in-out;
+}
+
+.btn-btn {
+    position: relative;
+    right: 2rem;
+    width: 170px;
+    height: 3rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 2px solid;
+    border-radius: 1rem;
+    color: green;
+    border-color: green;
+}
+
+.btn-btn:hover {
+    color: white;
+    background-color: green;
+    transition: all 250ms ease-in-out;
+}

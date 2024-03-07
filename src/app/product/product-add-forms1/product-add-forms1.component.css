@@ -1,0 +1,12 @@
+.form-group {
+    margin: 20px;
+}
+
+.todo_date {
+    font-size: 0.9rem;
+    color: black;
+    font-weight: bold;
+    position: relative;
+    top: 1rem;
+    text-decoration: underline rgb(34, 34, 255);
+}

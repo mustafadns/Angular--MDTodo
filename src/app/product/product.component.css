@@ -1,0 +1,23 @@
+.row {
+    position: relative;
+    width: 1270px;
+    margin-top: 2rem;
+}
+
+.card {
+    margin: 10px;
+}
+
+.alert {
+    right: 10px;
+}
+
+.todotittle {
+    text-shadow: 10px 10px 10px black;
+}
+
+.btn_del {
+    margin-top: 1rem;
+    width: 20rem;
+}
+

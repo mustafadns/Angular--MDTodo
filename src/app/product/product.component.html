@@ -1,0 +1,26 @@
+<h2 *ngIf="products; else: noProduct" class="todotittle">{{tittle}}</h2>
+
+
+<div class="row">
+    <ng-template #noProduct>
+        <div class="alert alert-danger" role="alert">
+            Hiç todo eklemedin hadi todo ekleyelim !!!
+        </div>
+    </ng-template>
+    <div *ngFor="let product of products" class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{product.tittle}}</h5>
+            <p class="card-text">
+                {{product.description}}
+            </p>
+            <div class="btn_total">
+                <div class="bnt_okey">
+                    <button (click)="okeyTodo(product)" class="btn btn-primary">Todo tamamlandı</button>
+                </div>
+                <div class="btn_del">
+                    <button (click)="deleteTodo(product)" class="btn btn-danger">Todo'yu sil</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

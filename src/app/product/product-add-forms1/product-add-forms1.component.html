@@ -1,0 +1,29 @@
+<h3>Yeni Todo Ekle</h3>
+<form #productAddForm="ngForm" (ngSubmit)="add(productAddForm)">
+    <div class="form-group">
+        <p class="todo_date">Todo Başlık Bilgisi</p>
+        <input type="text" placeholder="Todo Başlığı" #tittle="ngModel" [(ngModel)]="model.tittle" class="form-control"
+            name="tittle" id="tittle" required>
+            <div *ngIf="tittle.invalid&&tittle.dirty" class="alert alert-danger">
+                Todo Başlığı gereklidir.
+            </div>
+    </div>
+    <div class="form-group">
+        <p class="todo_date">Todo Açıklama Bilgisi</p>
+        <input type="text" placeholder="Todo Açıklaması" #description="ngModel" [(ngModel)]="model.description" class="form-control"
+            name="description" id="description" required>
+            <div *ngIf="description.invalid&&description.dirty" class="alert alert-danger">
+                Todo açıklaması gereklidir  .
+            </div>
+    </div>
+    <div class="form-group">
+        <p class="todo_date">Todo Ay Bilgisi</p>
+        <select class="form-control" placeholder="Todo Ay Bilgisi" #categoryId="ngModel" [(ngModel)]="model.categoryId" required id="categoryId" name="categoryId">
+            <option *ngFor="let category of categories" [value]="category.id">{{category.name}}</option>
+        </select>
+        <div *ngIf="categoryId.invalid&&categoryId.touched" class="alert alert-danger">
+            Hangi aynı todosu olduğu gereklidir.
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="productAddForm.invalid" style="position: relative;left: 20px;">Todo'yu Ekle</button>
+</form>
